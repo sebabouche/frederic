@@ -1,2 +1,52 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+.header(data-uk-parallax="bg: 200")
+  .header-inner.uk-text-center(data-uk-parallax="{opacity:0, viewport: 0.7, y: 100}")
+    h1 Frederic Nicolaïdis
+    h2 A world is not enough
+
+.uk-container.uk-container-center.uk-margin-top
+  .uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top"}"]
+    = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-visible-large"
+    ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
+      li
+        a href="#section1" Section 1
+      li
+        a href="#section2" Section 2
+      li
+        a href="#section3" Section 3
+
+    a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
+    = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
+
+  h1.uk-text-center#top Titre de la page
+
+  .uk-margin#section1
+    = image_tag "samples/1.jpg"
+
+  .uk-grid-divider
+
+  .uk-grid.uk-grid-width-medium-1-2#section2
+    div
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Beatae accusamus numquam impedit! Sapiente quasi eligendi assumenda
+          ad in fugiat repellendus minus sequi officia veritatis, perspiciatis
+          autem nemo vel odit, consequuntur?
+    div= image_tag "samples/2.jpg"
+
+  .uk-grid-divider
+
+  .uk-margin#section3
+    = image_tag "samples/3.jpg"
+
+  footer.uk-text-center.uk-margin-large
+    = link_to "To top", "#", data: {uk_smooth_scroll: ""}
+
+  .uk-offcanvas#offcanvas
+    .uk-offcanvas-bar
+      ul.uk-nav.uk-nav-offcanvas
+        li
+          a href="#section1" Section 1
+        li
+          a href="#section2" Section 2
+        li
+          a href="#section3" Section 3

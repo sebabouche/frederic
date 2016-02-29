@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//
+//= require uikit/js/uikit
+//= require uikit/js/components/sticky.min.js
+//= require uikit/js/components/parallax.min.js
+//
 //= require turbolinks
 //= require_tree .

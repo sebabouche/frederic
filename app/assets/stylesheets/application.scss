@@ -1,2 +1,6 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'uikit/scss/uikit-mixins';
+
+// your custom code goes here, e.g. mixins, variables
+@import 'styles';
+@import 'uikit/css/uikit.almost-flat.min.css';
+@import 'uikit/css/components/sticky.almost-flat.min.css';
