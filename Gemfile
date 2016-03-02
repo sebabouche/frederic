@@ -66,4 +66,10 @@ group :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem "puma"
+  gem "rails_12factor"
+  gem 'rack-cache', :require => 'rack/cache'
+end
+
 gem 'bower-rails'
