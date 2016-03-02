@@ -1,26 +1,31 @@
 .header(data-uk-parallax="bg: 200")
   .header-inner.uk-text-center(data-uk-parallax="{opacity:0, viewport: 0.7, y: 100}")
     h1 Frederic Nicolaïdis
-    h2 A world is not enough
 
 .uk-container.uk-container-center.uk-margin-top
-  .uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top"}"]
+  .uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top", z-index: 980}"]
     = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-visible-large"
     ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
-      li
-        a href="#section1" Section 1
-      li
-        a href="#section2" Section 2
-      li
-        a href="#section3" Section 3
+      li = link_to "Works", "#section1"
+      li = link_to "About Me"
 
     a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
     = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
 
-  h1.uk-text-center#top Titre de la page
+.uk-container.uk-container-center.uk-margin-top
+  h1.uk-text-center#section1 Works
 
-  .uk-margin#section1
-    = image_tag "samples/1.jpg"
+  .uk-grid
+    .uk-width-small-1-2.uk-width-medium-1-4
+      = link_to renault_zoe_path, class: "uk-panel uk-panel-box uk-panel-hover"
+        .uk-panel-teaser
+          = image_tag "samples/1.jpg"
+        h3.uk-panel-title Renault Zoe
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Vero consectetur praesentium corporis maxime natus totam dolore
+            saepe dicta, vel doloremque ea expedita, inventore aliquam quo
+            minus debitis non tempore modi.
 
   .uk-grid-divider
 

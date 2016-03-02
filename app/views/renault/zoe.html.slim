@@ -1,0 +1,81 @@
+.header(data-uk-parallax="bg: 200")
+  .header-inner.uk-text-center(data-uk-parallax="{opacity:0, viewport: 0.7, y: 100}")
+    h1 Renault ZOE
+
+.uk-container.uk-container-center.uk-margin-top
+  .uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top", z-index: 980}"]
+    = link_to "Renault Twizy", "#", class: "uk-navbar-brand uk-visible-large"
+    ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
+      li = link_to "Home", root_path
+      li = link_to "Overview", "#section1"
+      li = link_to "Lancement", "#section2"
+      li = link_to "Testimoniale", "#section3"
+      li = link_to "Pédagogie et promo", "#section4"
+      li = link_to "Communauté", "#section5"
+    a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
+    = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
+
+.uk-container.uk-container-center
+
+  .uk-margin-large.uk-margin-large-top#section1
+    h1.uk-text-center Une stratégie publicitaire en 4 temps
+
+  .uk-grid.uk-grid-small-1-2.uk-grid-width-medium-1-4
+
+    div = link_to "#section2", class: "uk-panel uk-panel-hover"
+      .uk-panel-teaser
+        = image_tag "samples/1.jpg"
+      h2.uk-panel-header Campagne de lancement
+      p
+        | En 2013: lancement de ZOE avec une campagne
+          ZOE SIMPLEMENT RÉVOLUTIONNAIRE sur les bénéfices pour tous
+          du 100% électrique/0 émission, portée par un film qui met
+          en scène la chute du mur, la fin du bruit et de la pollution.
+
+    div = link_to "#section3", class: "uk-panel uk-panel-hover"
+      .uk-panel-teaser
+        = image_tag "samples/2.jpg"
+      h2.uk-panel-header Campagne Testimoniale
+      p
+        | Avril 2014: une nouvelle campagne testimoniale ZOE 1000 EXPÉRIENCES
+        met en scène des portraits d’utilisateurs témoignant des performances
+        dynamiques de ZOE et des avantages de l’électrique au quotidien.
+        Cette campagne est signée « Essayez-la. Vous comprendrez ».
+
+    div = link_to "#section4", class: "uk-panel uk-panel-hover"
+      .uk-panel-teaser
+        = image_tag "samples/3.jpg"
+      h2.uk-panel-header Campagne Pedagogique et Promotionnelle
+      p
+        | Septembre 2014, nouvelle stratégie destinée à créer un choc des
+        ventes avec une nouvelle campagne plus pédagogique sur la simplicité
+        d’usage de ZOE et de son offre tout compris, soutenue par la mise en
+        place d’un numéro d’appel.
+
+    div = link_to "#section5", class: "uk-panel uk-panel-hover"
+      .uk-panel-teaser
+        = image_tag "samples/4.jpg"
+      h2.uk-panel-header La Communauté ZOE & Cie et Le Peuple Electrique
+      p
+        | En soutien de la campagne pédagogique, lancement d’une communauté
+          ZOE & Cie sur les réseaux sociaux, animée quotidiennement avec des
+          informations sur l’actualité de l’électrique et des activations :
+          la couverture du tour de France de deux journalistes UN ÉTÉ EN ZOE,
+          le documentaire LE PEUPLE ÉLECTRIQUE (diffusé pendant la COP21)
+          et le partenariat avec le magazine WE DEMAIN.
+
+  .uk-grid-divider
+
+.sn-cover300.sn-background-static#section2 style="background-image:url('#{image_url("samples/1.jpg")}');"
+  h1.sn-cover-text Campagne de lancement
+
+.sn-question
+  h1.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '-500,0'}")
+    span Comment promouvoir et adapter la révolution électrique 0 bruit, 0 émission au marché Français ?
+
+.sn-answer
+  h1.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '500,0'}")
+    span En démontrant le caractère révolutionnaire de ZOE à travers des bénéfices concrets et en surfant sur le made in France*.
+
+
+
