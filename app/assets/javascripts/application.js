@@ -19,3 +19,7 @@
 //
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready page:load', function(event) {
+    UIkit.init();
+});
