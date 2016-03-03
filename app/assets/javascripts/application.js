@@ -16,10 +16,21 @@
 //= require uikit/js/uikit
 //= require uikit/js/components/sticky.min.js
 //= require uikit/js/components/parallax.min.js
+//= require uikit/js/components/tooltip.min.js
 //
 //= require turbolinks
 //= require_tree .
 
 $(document).on('ready page:load', function(event) {
     UIkit.init();
+
+//      if (!$tooltip) {
+//        $tooltip = UI.$('<div class="uk-tooltip"></div>');
+//      }
+//
+//      if ($('body').find('.uk-tooltip').length === 0) {
+//        $tooltip.appendTo("body");
+//      }
+
 });
+

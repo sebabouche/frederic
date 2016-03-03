@@ -1,10 +1,10 @@
-.header {
+.sn-header {
   background: image-url('samples/3.jpg');
   background-size: cover;
   height: 100%;
 }
 
-.header-inner {
+.sn-header-inner {
     /* limit width*/
     max-width: 50%;
 
@@ -16,13 +16,13 @@
 }
 
 /* typography */
-.header h1 {
+.sn-header h1 {
     font-size: 60px;
     letter-spacing: -2px;
     font-weight: 900;
     color: white;
 }
-.header h2 {
+.sn-header h2 {
     font-weight: lighter;
     font-size: 32px;
     color: rgba(255,255,255,0.65);
@@ -31,7 +31,7 @@
 @media screen and (max-width: 480px) {
 
     /* realign headline on smaller devices */
-    .header-inner {
+    .sn-header-inner {
         max-width: 100%;
         margin: 0 auto;
         padding: 100px 10px;
@@ -62,6 +62,11 @@
     z-index: 1;
 }
 
+.sn-cover500 {
+    @extend .uk-cover-background, .uk-position-relative;
+    height: 400px;
+}
+
 .sn-cover400 {
     @extend .uk-cover-background, .uk-position-relative;
     height: 400px;
@@ -74,15 +79,31 @@
 
 .sn-cover-text {
     @extend .uk-position-cover, .uk-flex, .uk-flex-center, .uk-flex-middle;
-    color: $text-contrast-color;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.80)
+
+    h1 {
+        color: $text-contrast-color;
+    }
+
+    .sn-cover-text-number {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 100px;
+        background: #fff;
+        margin: 4px 10px 0 0;
+        color: $global-primary-background;
+        font-size: 50px;
+    }
 }
+
+
 
 .sn-question {
     @extend .sn-cover400, .sn-arrow;
     background-color: $text-contrast-color;
-    h1 {
-        padding: 0 40px;
+    h2 {
+        padding: 0 100px;
         text-align: center;
         color: $global-primary-background;
     }
@@ -90,9 +111,71 @@
 
 .sn-answer {
     @extend .sn-cover400, .sn-background-primary;
-    h1 {
-        padding: 0 40px;
+    h2 {
+        padding: 0 100px;
         text-align: center;
         color: $text-contrast-color;
     }
+}
+
+.sn-fake-browser-ui {
+    padding: 20px 0 0;
+    border-radius: 3px;
+    border-bottom: 2px solid #ccc;
+    background: #ddd;
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+
+    .frame {
+        display: block;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        left: 1px;
+    }
+
+    span {
+        height: 10px;
+        width: 10px;
+        border-radius: 10px;
+        float: left;
+        margin: 0 0 0 4px;
+
+        &:nth-child(1) {
+            background-color: $global-danger-background;
+        }
+        &:nth-child(2) {
+            background-color: $global-warning-background;
+        }
+        &:nth-child(3) {
+            background-color: $global-success-background;
+        }
+    }
+}
+
+.sn-heading {
+    @extend .uk-text-center;
+    color: $global-primary-background;
+}
+
+.sn-grid-divider {
+    @extend .uk-container, .uk-container-center, .uk-grid-divider;
+
+}
+
+.sn-container {
+    @extend .uk-container, .uk-container-center;
+}
+
+.sn-container-margin-large {
+    @extend .uk-container, .uk-container-center, .uk-margin-large;
+}
+
+.sn-container-margin-large-top {
+    @extend .uk-container, .uk-container-center, .uk-margin-large-top;
+}
+
+.sn-container-margin-large-bottom {
+    @extend .uk-container, .uk-container-center, .uk-margin-large-bottom;
 }

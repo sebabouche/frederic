@@ -1,18 +1,18 @@
-.header(data-uk-parallax="bg: 200")
-  .header-inner.uk-text-center(data-uk-parallax="{opacity:0, viewport: 0.7, y: 100}")
+.sn-header(data-uk-parallax="bg: 200")
+  .sn-header-inner.uk-text-center(data-uk-parallax="{opacity:0, viewport: 0.7, y: 100}")
     h1 Frederic Nicolaïdis
 
-.uk-container.uk-container-center.uk-margin-top
-  .uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top", z-index: 980}"]
-    = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-visible-large"
-    ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
-      li = link_to "Works", "#section1"
-      li = link_to "About Me"
 
-    a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
-    = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
+.uk-navbar#top[data-uk-sticky="{clsactive: "uk-navbar-attached", top: "-100", animation: "uk-animation-slide-top", z-index: 980}"]
+  = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-visible-large"
+  ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
+    li = link_to "Works", "#section1"
+    li = link_to "About Me"
 
-.uk-container.uk-container-center.uk-margin-top
+  a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
+  = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
+
+.sn-container-margin-large
   h1.uk-text-center#section1 Works
 
   .uk-grid
