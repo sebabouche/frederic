@@ -6,21 +6,24 @@
   = link_to "Renault Twizy", "#", class: "uk-navbar-brand uk-visible-large"
   ul.uk-navbar-nav.uk-visible-large(data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 60}}")
     li = link_to "Home", root_path
-    li = link_to "Overview", "#section1"
-    li = link_to "Lancement", "#section2"
-    li = link_to "Testimoniale", "#section3"
-    li = link_to "Pédagogie et promo", "#section4"
-    li = link_to "Communauté", "#section5"
+    li = link_to "Overview", "#overview"
+    li = link_to "Lancement", "#section1"
+    li = link_to "Testimoniale", "#section2"
+    li = link_to "Pédagogie et promo", "#section3"
+    li = link_to "Communauté", "#section4"
   a.uk-navbar-toggle.uk-hidden-large(href="#offcanvas" data-uk-offcanvas)
   = link_to "Frédéric Nicolaïdis", "#", class: "uk-navbar-brand uk-navbar-center uk-hidden-large"
 
-/// SECTION 1
-.sn-container-margin-large#section1
+
+////// OVERVIEW //////
+#overview
+
+.sn-container-margin-large
   h1.uk-text-center Une stratégie publicitaire en 4 temps
 
-  .uk-grid.uk-grid-small-1-2.uk-grid-width-medium-1-4
+  .uk-grid.uk-grid-small-1-2.uk-grid-width-medium-1-4(data-uk-scrollspy-nav="{closest: 'uk-panel', smoothscroll: {offset: 60}}")
 
-    div = link_to "#section2", class: "uk-panel uk-panel-hover"
+    div = link_to "#section1", class: "uk-panel uk-panel-hover"
       .uk-panel-teaser
         = image_tag "samples/1.jpg"
       h2.uk-panel-header Campagne de lancement
@@ -30,27 +33,27 @@
           du 100% électrique/0 émission, portée par un film qui met
           en scène la chute du mur, la fin du bruit et de la pollution.
 
-    div = link_to "#section3", class: "uk-panel uk-panel-hover"
+    div = link_to "#section2", class: "uk-panel uk-panel-hover"
       .uk-panel-teaser
         = image_tag "samples/2.jpg"
       h2.uk-panel-header Campagne Testimoniale
       p
         | Avril 2014: une nouvelle campagne testimoniale ZOE 1000 EXPÉRIENCES
-        met en scène des portraits d’utilisateurs témoignant des performances
-        dynamiques de ZOE et des avantages de l’électrique au quotidien.
-        Cette campagne est signée « Essayez-la. Vous comprendrez ».
+          met en scène des portraits d’utilisateurs témoignant des performances
+          dynamiques de ZOE et des avantages de l’électrique au quotidien.
+          Cette campagne est signée « Essayez-la. Vous comprendrez ».
 
-    div = link_to "#section4", class: "uk-panel uk-panel-hover"
+    div = link_to "#section3", class: "uk-panel uk-panel-hover"
       .uk-panel-teaser
         = image_tag "samples/3.jpg"
       h2.uk-panel-header Campagne Pedagogique et Promotionnelle
       p
         | Septembre 2014, nouvelle stratégie destinée à créer un choc des
-        ventes avec une nouvelle campagne plus pédagogique sur la simplicité
-        d’usage de ZOE et de son offre tout compris, soutenue par la mise en
-        place d’un numéro d’appel.
+          ventes avec une nouvelle campagne plus pédagogique sur la simplicité
+          d’usage de ZOE et de son offre tout compris, soutenue par la mise en
+          place d’un numéro d’appel.
 
-    div = link_to "#section5", class: "uk-panel uk-panel-hover"
+    div = link_to "#section4", class: "uk-panel uk-panel-hover"
       .uk-panel-teaser
         = image_tag "samples/4.jpg"
       h2.uk-panel-header La Communauté ZOE & Cie et Le Peuple Electrique
@@ -62,8 +65,12 @@
           le documentaire LE PEUPLE ÉLECTRIQUE (diffusé pendant la COP21)
           et le partenariat avec le magazine WE DEMAIN.
 
-/// SECTION 2
-.sn-cover500.sn-background-static#section2 style="background-image:url('#{image_url("samples/1.jpg")}');"
+
+
+////// SECTION 1 //////
+#section1
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
   .sn-cover-text
     .sn-cover-text-number 1
     h1 Campagne de lancement
@@ -95,10 +102,13 @@
 .sn-container.uk-width-medium-1-2
   iframe.uk-responsive-width(src="https://player.vimeo.com/video/79391205?badge=0&portrait=0&title=0" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 
-/// SECTION 3
-.sn-cover500.sn-background-static#section3 style="background-image:url('#{image_url("samples/1.jpg")}');"
+
+/// SUB SECTION 1A
+#section1A
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
   .sn-cover-text
-    .sn-cover-text-number 2A
+    .sn-cover-text-number 1A
     h1 Le site Une journée en ZOE
 
 .sn-question
@@ -111,8 +121,8 @@
 
 .sn-container-margin-large
   .uk-block-primary.uk-block-large.uk-contrast.uk-text-center
-    h1.uk-heading-large La promesse
-    h2 ZOE, CONÇUE POUR ÉMERVEILLER VOTRE QUOTIDIEN.
+    h1.uk-heading-large(data-uk-parallax="{opacity:'0,1', scale: '0,1', viewport: 0.4}") La promesse
+    h2(data-uk-parallax="{opacity:'0,1', scale: '2,1', viewport: 0.6}")  ZOE, CONÇUE POUR ÉMERVEILLER VOTRE QUOTIDIEN.
 
 .sn-container-margin-large
   h1.sn-heading Dispositif digital desktop/tablette. Navigation en scroll avec effets en parallaxe*.
@@ -127,9 +137,13 @@
 
 .sn-grid-divider
 
-.sn-cover500.sn-background-static#section3 style="background-image:url('#{image_url("samples/1.jpg")}');"
+
+/// SUB SECTION 1B
+#section1B
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
   .sn-cover-text
-    .sn-cover-text-number 2B
+    .sn-cover-text-number 1B
     h1 Opérations spéciales avec Psychologies
 
 .sn-question
@@ -184,9 +198,12 @@
     = image_tag "zoe/psy-10.jpg"
 
 
-.sn-cover500.sn-background-static#section3 style="background-image:url('#{image_url("samples/1.jpg")}');"
+/// SUB SECTION 1C
+#section1C
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
   .sn-cover-text
-    .sn-cover-text-number 2C
+    .sn-cover-text-number 1C
     h1 Opérations spéciales avec Maisons
 
 .sn-question
@@ -199,8 +216,8 @@
 
 .sn-container-margin-large
   .uk-block-primary.uk-block-large.uk-contrast.uk-text-center
-    h1.uk-heading-large La promesse
-    h2 Une voiture design, contemporaine et rechargeable
+     h1.uk-heading-large(data-uk-parallax="{opacity:'0,1', scale: '0,1', viewport: 0.3}") La promesse
+     h2(data-uk-parallax="{opacity:'0,1', scale: '2,1', viewport: 0.6}")  Une voiture design, contemporaine et rechargeable
 
 .sn-container-margin-large-top
   h1.sn-heading Le dispositif : deux publi-reportages magazines de 6 pages dont une insertion publicitaire.
@@ -214,3 +231,112 @@
     div = image_tag "zoe/psy-10.jpg"
     div = image_tag "zoe/psy-10.jpg"
 
+
+/// SUB SECTION 1D
+#section1D
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 1D
+    h1 Le garage connecté IKEA
+
+.sn-question
+  h2.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '-500,0'}")
+    span Comment toucher un public large sensible à la décoration*?
+
+.sn-answer
+  H2.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '500,0'}")
+    span En leur offrant la possibilité de se projeter dans leur future vie électrique à travers une réinterprétation du garage IKEA : simple, design et pratique.
+
+.sn-container-margin-large
+  .uk-block-primary.uk-block-large.uk-contrast.uk-text-center
+     h1.uk-heading-large(data-uk-parallax="{opacity:'0,1', scale: '0,1', viewport: 0.3}") La promesse
+     h2(data-uk-parallax="{opacity:'0,1', scale: '2,1', viewport: 0.6}")
+      span ZOE DÉMOCRATISE L’ÉLECTRIQUE AUSSI SIMPLEMENT
+      br
+      span QU’IKEA A DÉMOCRATISÉ LE DESIGN.
+
+.sn-container-margin-large-bottom
+  h1.sn-heading Le garage connecté et l’affichette prix
+  .uk-grid
+    .uk-width-4-5 = image_tag "zoe/ikea-1.jpg"
+    .uk-width-1-5 = image_tag "zoe/ikea-2.jpg"
+
+.sn-container-margin-large-bottom
+  h1.sn-heading  Et si la voiture 0 émission révolutionnait notre conception de l’habitat ?
+  .sn-container-margin-large-bottom
+    .uk-grid.uk-grid-width-medium-1-2(data-uk-grid-margin)
+      div = image_tag "zoe/ikea-3.jpg"
+      div = image_tag "zoe/ikea-4.jpg"
+
+
+
+////// SECTION 2 //////
+#section2
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 2
+    h1 Réinventer la campagne testimoniale
+
+
+/// SUB SECTION 2A
+#section2A
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 2A
+    h1 Le site 1000 expériences en ZOE
+
+.sn-container-margin-large-top
+  h1.sn-heading Plateforme digitale avec navigation* et contenus pédagogiques**
+
+
+.sn-container-margin-large.uk-width-medium-1-2
+  .sn-fake-browser-ui href="http://lmgtfy.com"
+    .frame
+      span
+      span
+      span
+    = image_tag "samples/4.jpg"
+
+
+/// SUB SECTION 2B
+#section2B
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 2B
+    h1 L’application ZOE Videomaker
+
+.sn-question
+  h2.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '-500,0'}")
+    span Comment produire 1 000 témoignages* pour le site ZOE à moindre coût ?
+
+.sn-answer
+  H2.uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle(data-uk-parallax="{opacity:'0,1', viewport: 0.5, x: '500,0'}")
+    span En mettant à disposition du réseau une application de type VINE, leur permettant de filmer des interviews pendant les essais.
+
+.sn-container-margin-large
+  .uk-grid.uk-grid-width-medium-1-3(data-uk-grid-margin)
+    div = image_tag "zoe/app-1.jpg"
+    div = image_tag "zoe/app-2.jpg"
+    div = image_tag "zoe/app-3.jpg"
+
+
+
+////// SECTION 3 //////
+#section3
+
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 3
+    h1 Campagne pédagogique et promotionnelle
+
+
+/// SUB SECTION 3A
+#section3A
+.sn-cover500.sn-background-static style="background-image:url('#{image_url("samples/1.jpg")}');"
+  .sn-cover-text
+    .sn-cover-text-number 3A
+    h1 La campagne Rouler électrique, c’est simple
