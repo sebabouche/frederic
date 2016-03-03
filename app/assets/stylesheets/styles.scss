@@ -62,6 +62,11 @@
     z-index: 1;
 }
 
+.sn-cover-viewport {
+    @extend .uk-cover-background, .uk-position-relative;
+    height: 100vh;
+}
+
 .sn-cover500 {
     @extend .uk-cover-background, .uk-position-relative;
     height: 400px;
@@ -80,7 +85,7 @@
 .sn-cover-text {
     @extend .uk-position-cover, .uk-flex, .uk-flex-center, .uk-flex-middle;
 
-    h1 {
+    h1, h2 {
         color: $text-contrast-color;
     }
 
@@ -94,6 +99,18 @@
         margin: 4px 10px 0 0;
         color: $global-primary-background;
         font-size: 50px;
+    }
+
+    .sn-cover-text-number-small {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 60px;
+        background: #fff;
+        margin: 4px 10px 0 0;
+        color: $global-primary-background;
+        font-size: 30px;
     }
 }
 
@@ -162,6 +179,14 @@
 .sn-grid-divider {
     @extend .uk-container, .uk-container-center, .uk-grid-divider;
 
+}
+
+.sn-block {
+    @extend .uk-block, .uk-block-default;
+}
+
+.sn-block-muted {
+    @extend .uk-block, .uk-block-muted;
 }
 
 .sn-container {

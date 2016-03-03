@@ -73,3 +73,4 @@ group :production do
 end
 
 gem 'bower-rails'
+gem 'jquery-turbolinks'
