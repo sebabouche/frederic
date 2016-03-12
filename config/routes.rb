@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root 'home#index'
 
   get 'renault/zoe'
+  get 'renault/twizy'
 end
