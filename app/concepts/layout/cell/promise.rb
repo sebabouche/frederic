@@ -6,7 +6,7 @@ class Layout::Cell::Promise < Layout::Cell
           <h1 class="uk-heading-large" data-uk-parallax="{opacity:'0,1', scale: '0,1', viewport: 0.3}">
             La promesse
           </h1>
-          <h2 data-uk-parallax="{opacity:'0,1', scale: '2,1', viewport: 0.6}">#{model}</h2>
+          <h2 data-uk-parallax="{opacity:'0,1', scale: '0,1', viewport: 0.6}">#{model}</h2>
         </div>
       </div>
     ]
