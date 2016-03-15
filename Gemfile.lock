@@ -380,6 +380,8 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   slim-rails
+  sprockets
+  sprockets-rails
   sqlite3
   therubyracer
   thin
